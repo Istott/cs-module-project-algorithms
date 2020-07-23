@@ -4,8 +4,27 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    # n = len(arr)
 
-    pass
+    # for i in range(n): 
+    #     j = 0
+    #     while(j < n): 
+    #         if (i != j and arr[i] == arr[j]): 
+    #             break
+    #         j += 1
+    #     if (j == n): 
+    #         return arr[i] 
+      
+    # return -1
+
+    s= set()
+
+    for x in arr:
+        if x in s:
+            s.remove(x)
+        else:
+            s.add(x)
+    return list(s)[0]
 
 
 if __name__ == '__main__':
